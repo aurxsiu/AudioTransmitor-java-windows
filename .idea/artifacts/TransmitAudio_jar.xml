@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TransmitAudio:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/TransmitAudio_jar</output-path>
+    <root id="archive" name="TransmitAudio.jar">
+      <element id="module-output" name="TransmitAudio" />
+    </root>
+  </artifact>
+</component>
