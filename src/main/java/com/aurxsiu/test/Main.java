@@ -1,5 +1,7 @@
 package com.aurxsiu.test;
 
+import com.aurxsiu.test.config.Port;
+
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,7 +14,7 @@ import java.net.Socket;
 public class Main {
     //todo 增加设备检测以及端口选择的功能,端口选择依赖设备检测
     public static void main(String[] args) throws Exception {
-        if(args.length!=1){
+        /*if(args.length!=1){
             throw new RuntimeException("参数不合法:https://github.com/aurxsiu/AudioTransmitor-java-windows");
         }else{
             String s = args[0];
@@ -25,14 +27,31 @@ public class Main {
                     defaultRun();
                 }//default
             }
-        }
+        }*/
+
+        new Thread(()->{
+            try {
+                Preparation.tryConnect();
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+        }).start();
+
+        new Thread(()->{
+            try{
+                defaultRun();
+            }catch (Exception e){
+                throw new RuntimeException(e);
+            }
+        }).start();
 
     }
 
     public static void defaultRun() throws Exception{
-        try (ServerSocket serverSocket = new ServerSocket(20233)) {
+        try (ServerSocket serverSocket = new ServerSocket(Port.audioListen.getPort())) {
             System.out.println("等待手机连接...");
             Socket socket = serverSocket.accept();
+            Preparation.isConnected = true;
             System.out.println("客户端已连接：" + socket.getRemoteSocketAddress());
             InputStream ffmpegOut = getInputStream();
             OutputStream socketOut = socket.getOutputStream();
