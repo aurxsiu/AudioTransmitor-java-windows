@@ -1,5 +1,7 @@
 package com.aurxsiu.test;
 
+import org.apache.commons.validator.routines.InetAddressValidator;
+
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -15,16 +17,7 @@ public class Main {
         if(args.length!=1){
             throw new RuntimeException("参数不合法:https://github.com/aurxsiu/AudioTransmitor-java-windows");
         }else{
-            String s = args[0];
-            switch (s){
-                case "s"->{
-                    //todo 完善一下
-                    Preparation.setDevice();
-                }//set
-                case "d"->{
-                    defaultRun();
-                }//default
-            }
+            defaultRun();
         }
 
     }
