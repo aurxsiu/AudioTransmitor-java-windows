@@ -10,9 +10,8 @@ import java.util.Scanner;
 public class Preparation {
     public static final String defaultDeviceFileName = "defaultDevice";
     public static String getDriveByDefault() throws  Exception{
-        URL resource = Preparation.class.getClassLoader().getResource("./"+defaultDeviceFileName);
-        if (resource != null) {
-            File file = new File(resource.getPath());
+        File file = new File(System.getProperty("user.dir").replace("\\","/")+"/"+defaultDeviceFileName);
+        if(file.isFile()){
             try (FileInputStream fileInputStream = new FileInputStream(file)) {
                 String result = new String(fileInputStream.readAllBytes(),StandardCharsets.UTF_8);
                 if (!result.isEmpty()) {
@@ -23,7 +22,7 @@ public class Preparation {
         return setDevice();
     }
     public static String setDevice() throws Exception{
-        /*ffmpeg -list_devices true -f dshow -i dummy */
+            /*ffmpeg -list_devices true -f dshow -i dummy */
         ProcessBuilder pb = new ProcessBuilder(
                 "ffmpeg",
                 "-list_devices","true",
@@ -42,7 +41,7 @@ public class Preparation {
         System.out.println("输入设备名:");
         Scanner scanner = new Scanner(System.in);
         String result = scanner.nextLine();
-        File file = new File(Preparation.class.getClassLoader().getResource("").getPath()+"/"+defaultDeviceFileName);
+        File file = new File(System.getProperty("user.dir").replace("\\","/")+"/"+defaultDeviceFileName);
         file.createNewFile();
         try (FileOutputStream fileOutputStream = new FileOutputStream(file)) {
             fileOutputStream.write(result.getBytes(StandardCharsets.UTF_8));

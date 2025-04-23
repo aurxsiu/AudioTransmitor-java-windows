@@ -9,15 +9,26 @@ ffmpeg version 7.1.1-essentials_build-www.gyan.dev Copyright (c) 2000-2025 the F
   libswscale      8.  3.100 /  8.  3.100
   libswresample   5.  3.100 /  5.  3.100
   libpostproc    58.  3.100 / 58.  3.100
-[dshow @ 0000016bc4145700] "ACER FHD User Facing" (video)
-[dshow @ 0000016bc4145700]   Alternative name "@device_pnp_\\?\usb#vid_04f2&pid_b777&mi_00#7&2ecefdb3&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global"
-[dshow @ 0000016bc4145700] "OBS Virtual Camera" (none)
-[dshow @ 0000016bc4145700]   Alternative name "@device_sw_{860BB310-5D01-11D0-BD3B-00A0C911CE86}\{A3FCE0F5-3493-419F-958A-ABA1250EC20B}"
-[dshow @ 0000016bc4145700] "CABLE Output (VB-Audio Virtual Cable)" (audio)
-[dshow @ 0000016bc4145700]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{818B4204-C915-41FF-AF25-1CD76FCFA1D2}"
-[dshow @ 0000016bc4145700] "立体声混音 (Realtek(R) Audio)" (audio)
-[dshow @ 0000016bc4145700]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{0002678E-2A5C-495C-9D5D-2481A0E52BFA}"
-[dshow @ 0000016bc4145700] "阵列麦克风 (AMD Audio Device)" (audio)
-[dshow @ 0000016bc4145700]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{243AD4D7-B685-4BFA-BAD5-850C3CD626DF}"
-[in#0 @ 0000016bc4145300] Error opening input: Immediate exit requested
-Error opening input file dummy.
+[aist#0:0/pcm_s16le @ 0000025c3dab6bc0] Guessed Channel Layout: stereo
+Input #0, dshow, from 'audio=CABLE Output (VB-Audio Virtual Cable)':
+  Duration: N/A, start: 254317.600000, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, s16le, to 'pipe:':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Audio: pcm_s16le, 44100 Hz, stereo, s16, 1411 kb/s
+      Metadata:
+        encoder         : Lavc61.19.101 pcm_s16le
+size=       0KiB time=00:00:00.50 bitrate=   0.0kbits/s speed=0.988x    size=       0KiB time=00:00:01.51 bitrate=   0.0kbits/s speed=1.48x    size=     258KiB time=00:00:02.01 bitrate=1051.6kbits/s speed=1.31x    size=     345KiB time=00:00:02.51 bitrate=1123.1kbits/s speed=1.22x    size=     431KiB time=00:00:03.01 bitrate=1170.9kbits/s speed=1.17x    size=     517KiB time=00:00:03.51 bitrate=1205.1kbits/s speed=1.14x    size=     603KiB time=00:00:04.01 bitrate=1230.8kbits/s speed=1.12x    size=     689KiB time=00:00:04.51 bitrate=1250.8kbits/s speed= 1.1x    size=     775KiB time=00:00:05.01 bitrate=1266.8kbits/s speed=1.08x    size=     861KiB time=00:00:05.51 bitrate=1279.9kbits/s speed=1.07x    size=     947KiB time=00:00:06.01 bitrate=1290.6kbits/s speed=1.06x    size=    1034KiB time=00:00:06.51 bitrate=1300.0kbits/s speed=1.05x    size=    1120KiB time=00:00:07.01 bitrate=1308.0kbits/s speed=1.05x    size=    1206KiB time=00:00:07.51 bitrate=1314.8kbits/s speed=1.04x    size=    1292KiB time=00:00:08.01 bitrate=1320.7kbits/s speed=1.04x    size=    1378KiB time=00:00:08.51 bitrate=1326.2kbits/s speed=1.03x    size=    1464KiB time=00:00:09.01 bitrate=1330.9kbits/s speed=1.03x    size=    1550KiB time=00:00:09.51 bitrate=1335.1kbits/s speed=1.03x    size=    1637KiB time=00:00:10.01 bitrate=1338.9kbits/s speed=1.02x    size=    1723KiB time=00:00:10.51 bitrate=1342.3kbits/s speed=1.02x    size=    1809KiB time=00:00:11.01 bitrate=1345.5kbits/s speed=1.02x    size=    1895KiB time=00:00:11.51 bitrate=1348.3kbits/s speed=1.02x    size=    1981KiB time=00:00:12.01 bitrate=1350.9kbits/s speed=1.01x    size=    2067KiB time=00:00:12.51 bitrate=1353.3kbits/s speed=1.01x    size=    2153KiB time=00:00:13.01 bitrate=1355.6kbits/s speed=1.01x    size=    2239KiB time=00:00:13.51 bitrate=1357.6kbits/s speed=1.01x    size=    2326KiB time=00:00:14.01 bitrate=1359.5kbits/s speed=1.01x    size=    2412KiB time=00:00:14.51 bitrate=1361.3kbits/s speed=1.01x    size=    2498KiB time=00:00:15.01 bitrate=1363.0kbits/s speed=   1x    size=    2584KiB time=00:00:15.51 bitrate=1364.5kbits/s speed=   1x    size=    2670KiB time=00:00:16.01 bitrate=1366.0kbits/s speed=   1x    size=    2756KiB time=00:00:16.51 bitrate=1367.4kbits/s speed=   1x    size=    2842KiB time=00:00:17.01 bitrate=1368.6kbits/s speed=   1x    size=    3015KiB time=00:00:18.01 bitrate=1371.0kbits/s speed=1.03x    size=    3101KiB time=00:00:18.51 bitrate=1372.1kbits/s speed=1.03x    size=    3187KiB time=00:00:19.01 bitrate=1373.1kbits/s speed=1.02x    size=    3273KiB time=00:00:19.51 bitrate=1374.0kbits/s speed=1.02x    size=    3359KiB time=00:00:20.01 bitrate=1375.0kbits/s speed=1.02x    size=    3445KiB time=00:00:20.51 bitrate=1375.9kbits/s speed=1.02x    size=    3531KiB time=00:00:21.01 bitrate=1376.7kbits/s speed=1.02x    size=    3618KiB time=00:00:21.51 bitrate=1377.5kbits/s speed=1.02x    size=    3704KiB time=00:00:22.01 bitrate=1378.3kbits/s speed=1.02x    size=    3790KiB time=00:00:22.51 bitrate=1379.0kbits/s speed=1.02x    size=    3876KiB time=00:00:23.01 bitrate=1379.7kbits/s speed=1.01x    size=    3962KiB time=00:00:23.51 bitrate=1380.4kbits/s speed=1.01x    size=    4048KiB time=00:00:24.01 bitrate=1381.1kbits/s speed=1.01x    size=    4134KiB time=00:00:24.51 bitrate=1381.7kbits/s speed=1.01x    size=    4221KiB time=00:00:25.01 bitrate=1382.2kbits/s speed=1.01x    size=    4307KiB time=00:00:25.51 bitrate=1382.8kbits/s speed=1.01x    size=    4393KiB time=00:00:26.01 bitrate=1383.4kbits/s speed=1.01x    size=    4479KiB time=00:00:26.51 bitrate=1383.9kbits/s speed=1.01x    size=    4565KiB time=00:00:27.01 bitrate=1384.4kbits/s speed=1.01x    size=    4651KiB time=00:00:27.51 bitrate=1384.9kbits/s speed=1.01x    size=    4737KiB time=00:00:28.01 bitrate=1385.4kbits/s speed=1.01x    size=    4823KiB time=00:00:28.51 bitrate=1385.8kbits/s speed=1.01x    size=    4910KiB time=00:00:29.01 bitrate=1386.2kbits/s speed=1.01x    size=    4996KiB time=00:00:29.51 bitrate=1386.7kbits/s speed=   1x    size=    5082KiB time=00:00:30.01 bitrate=1387.1kbits/s speed=   1x    [aost#0:0/pcm_s16le @ 0000025c3da49300] Error submitting a packet to the muxer: Invalid argument
+    Last message repeated 1 times
+[out#0/s16le @ 0000025c3da46480] Error muxing a packet
+[out#0/s16le @ 0000025c3da46480] Task finished with error code: -22 (Invalid argument)
+[out#0/s16le @ 0000025c3da46480] Terminating thread with return code -22 (Invalid argument)
+[out#0/s16le @ 0000025c3da46480] Error writing trailer: Invalid argument
+[out#0/s16le @ 0000025c3da46480] Error closing file: Invalid argument
+[out#0/s16le @ 0000025c3da46480] video:0KiB audio:5254KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=    5168KiB time=00:00:30.51 bitrate=1387.5kbits/s speed=   1x    
+Conversion failed!
