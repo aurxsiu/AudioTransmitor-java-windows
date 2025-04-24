@@ -21,8 +21,6 @@ public class Main {
     }
 
     public static void defaultRun() throws Exception{
-
-
         try (ServerSocket serverSocket = new ServerSocket(20233)) {
             System.out.println("等待手机连接...");
             Socket socket = serverSocket.accept();
